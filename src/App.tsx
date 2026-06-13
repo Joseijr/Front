@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import FiltersSection from "./components/FiltersSection";
 import Card from "./components/Card";
 
-import Login from "./Pages/login";
+import Login from "./Pages/Login";
 
 function App() {
   return (
