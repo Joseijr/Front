@@ -1,7 +1,7 @@
 function Footer() {
     return (
-        <footer className="bg-red-500 text-white">
-            <div className="max-w-7xl  py-8">
+        <footer className="bg-red-500 text-white mt-full">
+            <div className="max-w-7xl py-8">
 
                 <div className="flex items-center gap-4">
                     <img

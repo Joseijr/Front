@@ -6,7 +6,7 @@ function Register() {
         return (
 
             //De momento con datos estáticos, luego se conectará a una API para obtener los datos reales
-            <div className="min-h-screen bg-black text-white">
+            <div className="min-h-screen text-white">
                 <Header />
 
                 <RegisterForm />

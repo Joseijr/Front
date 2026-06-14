@@ -11,6 +11,8 @@ import Profile from "./Pages/Profile";
 
 function App() {
   return (
+    
+
     <BrowserRouter>
       <Routes>
 
@@ -18,9 +20,11 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="min-h-screen bg-black text-white ">
+            <div className="min-h-screen flex flex-col bg-black text-white ">
               <Header />
 
+
+              <main className="flex-1"> 
               <div className="max-w-7xl mx-10 ">
                 <FiltersSection
                   filters={[
@@ -65,10 +69,11 @@ function App() {
                 </div>
 
               </div>
+                    </main>
               <Footer />
             </div>
           }
-        />
+          />
 
         {/* Login */}
         <Route path="/login" element={<Login />} />
@@ -78,6 +83,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+        
   );
 }
 
