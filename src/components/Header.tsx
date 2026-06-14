@@ -16,21 +16,27 @@ function Header() {
                 </div>
 
                 {/* Nav */}
+                <div className="text-white">
+
                 <nav className="flex gap-8">
                     <Link to="/" className="hover:text-red-500 hover:scale-105 transition-transform">
                         Inicio
                     </Link>
                     <a href="/posts" className="hover:text-red-500 line-through ">
-                        Mis Posts
+                        <Link to="/profile" className="hover:text-red-500 hover:scale-105 transition-transform">
+                            Mis Posts
+                        </Link>
                     </a>
 
                     {/* Temporal para probar links */}
-                
-                    
                     <Link to="/login" className="hover:text-red-500 hover:scale-105 transition-transform">
                         Login
                     </Link>
+                    <Link to="/register" className="hover:text-red-500 hover:scale-105 transition-transform">
+                        Register
+                    </Link>
                 </nav>
+                </div>
 
                 {/* Acciones */}
                 <div className="flex items-center gap-4">
@@ -41,7 +47,7 @@ function Header() {
                     /> */}
 
                     <button className="bg-white text-black px-5 py-2 rounded-full font-medium">
-                        Reportar Objeto
+                        Reportar
                     </button>
 
                     <button>🔔</button>
