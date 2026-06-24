@@ -49,4 +49,4 @@ http://localhost:5173
 * Yodred Mendez Salas
 ## 
 
-Powered by cafeine, determination, questionable sleep schedules, last-minute fixes, and a impresive hope that the code works on the first try.
+Powered with many Monster, determination, questionable sleep schedules, last-minute fixes, and a impresive hope that the code works.
