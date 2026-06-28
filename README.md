@@ -2,21 +2,12 @@
 
 Lost & Post is a web application that helps students report and recover lost items within the university.
 
-## Technologies
-
-* React
-* TypeScript
-* Vite
-* Tailwind CSS
-* React Router DOM
 
 ## Backend Repository
 
-Backend source code:
+Backend  code:
 
 https://github.com/HugoUgalde/ProyectoInt2
-
-
 
 ## Installation
 
@@ -27,18 +18,6 @@ npm install
 ```
 ```bash
 npm install react-router-dom
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Open:
-
-```text
-http://localhost:5173
 ```
 
 
