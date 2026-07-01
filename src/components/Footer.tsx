@@ -23,7 +23,7 @@ function Footer() {
 
             </div>
 
-            <div className="border-t border-red-400">
+            <div className="border-t border-white">
                 <div className="relative max-w-7xl mx-auto px-6 py-4 text-sm">
 
                     <p className="text-center">

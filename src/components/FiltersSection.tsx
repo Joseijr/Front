@@ -1,40 +1,67 @@
 interface FiltersSectionProps {
     filters: string[];
+    selectedFilter: string | null;
+    onSelectFilter: (filter: string | null) => void;
+    selectedType: "Todos" | "Perdido" | "Encontrado";
+    onSelectType: (type: "Todos" | "Perdido" | "Encontrado") => void;
 }
 
-function FiltersSection({ filters }: FiltersSectionProps) {
+function FiltersSection({ filters, selectedFilter, onSelectFilter, selectedType, onSelectType }: FiltersSectionProps) {
+    const buttonClass = (active: boolean) =>
+        `px-4 py-1 rounded-full text-sm font-medium transition ${active ? 'bg-red-500 text-white' : 'bg-zinc-700 text-white hover:bg-red-500'}`;
+
     return (
         <section className="flex justify-between items-center mt-10">
             <div>
                 <h2 className="text-3xl font-bold text-white">
                     Objetos Recientes
                 </h2>
-
                 <p className="text-gray-400 mt-2">
                     Explora los últimos reportes en tu comunidad.
                 </p>
-
-                <div className="flex gap-2 mt-4">
-                    <button className="mt-4 px-4 py-1 bg-zinc-700 text-white rounded-full font-medium hover:bg-red-600 transition">
+                <div className="flex gap-2 mt-4 flex-wrap">
+                    <button
+                        type="button"
+                        onClick={() => onSelectType("Todos")}
+                        className={buttonClass(selectedType === "Todos")}
+                    >
+                        Todos
+                    </button>
+                    <button
+                        type="button"
+                        onClick={() => onSelectType("Encontrado")}
+                        className={buttonClass(selectedType === "Encontrado")}
+                    >
                         Encontrados
                     </button>
-                    <button className="mt-4 px-4 py-1 bg-zinc-700 text-white rounded-full font-medium hover:bg-red-600 transition">
+                    <button
+                        type="button"
+                        onClick={() => onSelectType("Perdido")}
+                        className={buttonClass(selectedType === "Perdido")}
+                    >
                         Perdidos
                     </button>
                 </div>
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4 flex-wrap">
+                    <button
+                        type="button"
+                        onClick={() => onSelectFilter(null)}
+                        className={buttonClass(selectedFilter === null)}
+                    >
+                        Todos
+                    </button>
                     {filters.map((filter) => (
                         <button
                             key={filter}
-                            className="px-4 py-1 rounded-full bg-zinc-700 text-sm text-white hover:bg-red-500 "
+                            type="button"
+                            onClick={() => onSelectFilter(filter)}
+                            className={buttonClass(selectedFilter === filter)}
                         >
                             {filter}
                         </button>
                     ))}
                 </div>
             </div>
-
-    
         </section>
     );
 }

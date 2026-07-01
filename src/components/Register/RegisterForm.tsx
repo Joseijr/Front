@@ -3,14 +3,15 @@ import { Link } from "react-router-dom"
 
 interface RegisterFormProps {
     onSubmit?: (
-        name: string,
+        username: string,
         carnet: string,
-        password: string
+        password: string,
+        confirmPassword: string
     ) => void;
 }
 
 function RegisterForm({ onSubmit }: RegisterFormProps) {
-    const [name, setName] = useState("");
+    const [username, setUsername] = useState("");
     const [carnet, setCarnet] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -24,7 +25,7 @@ function RegisterForm({ onSubmit }: RegisterFormProps) {
         }
 
         if (onSubmit) {
-            onSubmit(name, carnet, password);
+            onSubmit(username, carnet, password, confirmPassword);
         }
     };
 
@@ -50,14 +51,14 @@ function RegisterForm({ onSubmit }: RegisterFormProps) {
 
                     <div>
                         <label className="block text-sm text-zinc-300 mb-2">
-                            Nombre Completo
+                            Nombre de usuario
                         </label>
 
                         <input
                             type="text"
-                            placeholder="Juan Pérez"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            placeholder="juanperez"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
                             className="w-full bg-zinc-800 text-white px-4 py-3 rounded-lg outline-none border border-zinc-700 focus:border-white"
                         />
                     </div>
